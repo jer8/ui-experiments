@@ -1,0 +1,56 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  color: #f6f6f6;
+  height: 90%;
+  background-image: url('../images/background.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 5%;
+}
+
+.header {
+  /*https://stackoverflow.com/questions/31116427/flexbox-column-align-multiple-items-to-both-top-and-bottom*/
+  margin-top: auto;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 3.5em;
+}
+
+footer {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+#close, #comments {
+  flex: 0 0 20%;
+}
+
+#navigation {
+  flex: 1;
+}
+
+#navigation ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#navigation ul li {
+  display: inline;
+}
