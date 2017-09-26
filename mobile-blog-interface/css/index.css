@@ -42,8 +42,19 @@ footer {
   flex: 0 0 20%;
 }
 
+#close {
+  text-transform: uppercase;
+  font-family: 'Arvo', serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#comments > i {
+  color: #0f1215;
+}
+
 #navigation {
-  flex: 1;
+  flex-grow: 1;
 }
 
 #navigation ol {
@@ -60,7 +71,7 @@ footer {
   display: block;
   width: 10px;
   height: 10px;
-  margin: 0 4px;
+  margin: 0 5px;
   background-color: #5c6975;
   border-radius: 50%;
 }
