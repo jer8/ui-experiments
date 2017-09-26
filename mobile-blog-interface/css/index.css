@@ -46,11 +46,25 @@ footer {
   flex: 1;
 }
 
-#navigation ul {
+#navigation ol {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
+}
+#navigation ol > li {
+    display: inline;
 }
 
-#navigation ul li {
-  display: inline;
+#navigation ol > li > a{
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  background-color: #5c6975;
+  border-radius: 50%;
+}
+
+#navigation ol > li > a:hover, #navigation ol > li > a.active{
+  background-color: #0f1215;
 }
