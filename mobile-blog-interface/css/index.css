@@ -10,7 +10,6 @@ body {
 }
 
 main {
-
   color: #f6f6f6;
   height: 90%;
   background-image: url('../images/background.jpeg');
@@ -22,6 +21,24 @@ main {
   padding: 5%;
   text-transform: uppercase;
 }
+
+/* Image overlay to make text more readable */
+main:before{
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:90%;
+  background-image: linear-gradient(to right, #002f4b, #131419);
+  opacity: .2; 
+  z-index: 0;
+}
+
+main * {
+  z-index: 1;
+}
+
 
 main > div.header {
   /*https://stackoverflow.com/questions/31116427/flexbox-column-align-multiple-items-to-both-top-and-bottom*/
@@ -52,12 +69,11 @@ main > button {
 }
 
 main > button:hover {
- 
   background-color: #e0d9d9; 
   cursor: pointer;
 }
 
-/*Footer CSS */
+/* Footer CSS */
 
 footer {
   height: 10%;
