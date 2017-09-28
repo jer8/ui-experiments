@@ -1,0 +1,115 @@
+body {
+  font-family: 'Arvo', serif;
+}
+
+header {
+  position: relative;
+  height: 10%;
+  text-align: center;
+  color: #0f1215;
+}
+
+#comments-count {
+  font-weight: bold;
+  display: flex;
+  height: 100%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+}
+
+#close {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+#close > i:hover {
+  cursor: pointer;
+  color: #5c6975;
+}
+
+
+/*making the font awesome font font-weight lighter
+https://stackoverflow.com/questions/17836851/change-font-weight-of-fontawesome-icons*/
+
+#close > i {
+  -webkit-text-stroke: 3px white;
+}
+
+main {
+  font-size: .8em;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
+
+.comment {
+  display: flex;
+  padding: 10px;
+}
+
+main > .comment > .user-pic {
+  display: flex;
+  align-items: center;
+}
+
+main > .comment > .user-pic > img {
+  width: 50px;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.user-comment-content {
+  margin-left: 10px;
+  flex: 1 0 10%;
+}
+
+.user-comment-header {
+  padding: 5px 0;
+}
+
+.user-comment-header > span.middot {
+  font-size: 1.5em;
+  position: relative;
+  top: 3px;
+  margin: 0 5px;
+  color: #c1c1c3;
+}
+
+.user-comment-header > span.user-comment-time {
+  color: #c1c1c3;
+}
+
+.comment-text {
+  line-height: 1.8em;
+  padding-right: 10px;
+  text-align: justify;
+  color: #727980;
+}
+
+
+/*==========  Media Queries  ==========*/
+
+
+/* iPad */
+
+@media only screen and (min-width: 1024px) {
+  main {
+    font-size: 1em;
+    padding: 40px;
+  }
+  .comment {
+    padding: 20px 10px;
+  }
+  main > .comment > .user-pic > img {
+    width: 80px;
+  }
+  .user-comment-content {
+    margin-left: 30px;
+  }
+}
