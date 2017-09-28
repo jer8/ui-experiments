@@ -4,13 +4,15 @@ main {
   flex-direction: column;
   height: 90%;
   padding: 5%;
-  text-align: justify;
-  color: #3c3e42;
   background-color: #f7f8f9;
+
 }
 
 p {
-  line-height: 2em;
+  color: #727980;
+  font-family: 'Arvo', serif;
+  text-align: justify;
+  letter-spacing: 1px;
 }
 
 main > p:first-child::first-letter {
@@ -32,6 +34,10 @@ main > p:first-child::first-letter {
     padding-top: 5%;
     padding-right: 8px;
   }
+
+  p {
+      line-height: 2em;
+  }
 }
 
 
@@ -39,7 +45,7 @@ main > p:first-child::first-letter {
 
 @media only screen and (min-width: 480px) {
   p {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   main > p:first-child::first-letter {
     font-size: 6em;
@@ -48,6 +54,11 @@ main > p:first-child::first-letter {
 }
 
 @media only screen and (min-width: 630px) {
+
+  p {
+    line-height: 2.2em;
+  }
+
   main > p:first-child::first-letter {
     font-size: 7em;
   }
@@ -56,10 +67,8 @@ main > p:first-child::first-letter {
 
 /* Small Devices, Tablets */
 
-@media only screen and (min-width: 768px) {
-  p {
-    line-height: 2.2em;
-  }
+@media only screen and (min-width: 720px) {
+
   main > p:first-child::first-letter {
     font-size: 7.5em;
     padding-bottom: 18px;
@@ -86,7 +95,6 @@ main > p:first-child::first-letter {
 @media only screen and (min-width: 1024px) {
   p {
     font-size: 1.6em;
-    line-height: 2em;
   }
   main > p:first-child::first-letter {
     font-size: 6.8em;
