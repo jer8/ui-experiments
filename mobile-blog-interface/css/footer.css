@@ -1,0 +1,87 @@
+/*==========  Footer CSS  ==========*/
+
+footer {
+  display: flex;
+  height: 10%;
+  text-align: center;
+  align-items: center;
+}
+
+#close, #comments {
+  flex: 0 0 20%;
+}
+
+#close {
+  font-family: 'Arvo', serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#comments > i {
+  color: #0f1215;
+}
+
+#close > span:hover, #comments > i:hover {
+  cursor: pointer;
+  color: #5c6975;
+}
+
+#navigation {
+  flex-grow: 1;
+}
+
+#navigation ol {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+  justify-content: center;
+}
+
+#navigation ol > li {
+  display: inline;
+}
+
+#navigation ol > li > a {
+  display: block;
+  border-radius: 50%;
+  background-color: #5c6975;
+}
+
+#navigation ol > li > a:hover, #navigation ol > li > a.active {
+  background-color: #0f1215;
+}
+
+
+
+ /*==========  Media Queries  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px){
+  #close {
+    font-size: .8em;
+  }
+  #comments > i {
+    font-size: 1.5em;
+  }
+  #navigation ol > li > a {
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  #close {
+    font-size: 1em;
+  }
+  #comments > i {
+    font-size: 1.6em;
+  }
+  #navigation ol > li > a {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+  }
+}
