@@ -8,18 +8,23 @@ body {
   font-size: 16px;
   margin: 0;
   padding: 0;
+
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 1px;
 }
 
 header {
   display: flex;
   flex-flow: column;
   height: 25%;
+  max-width: 100%;
   background-image: url('images/navbackground.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   color: #FFF;
   padding: 15px 20px;
+  margin-bottom: 20px;
 }
 
 /* Image overlay to make text more readable */
@@ -63,8 +68,6 @@ header *{
 
 #list-detail {
   margin-top: auto;
-  font-family: 'Raleway', sans-serif;
-  letter-spacing: 1px;
   font-size: 1.2em;
 }
 
@@ -83,3 +86,102 @@ header *{
 .fab > span > i {
   -webkit-text-stroke: 3px #fd5c64;
 }
+
+
+.list-tasks {
+  padding:20px 15px;
+}
+
+.dailytasks {
+
+display: flex;
+flex-direction: column;
+padding: 10px 5px;
+}
+
+
+.dailytasks-header {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: #6b5684;
+}
+
+
+.dailytasks-task {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.dailytasks-task-checkbox, .dailytasks-task-action {
+  flex: 0 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.dailytasks-task-checkbox > input[type="checkbox"] {
+  transform: scale(1.5);
+}
+
+.dailytasks-task-details {
+  flex: 1 0 0;
+  padding: 10px 0;
+  padding-left: 20px;
+  align-items: center;
+  display: flex;
+}
+
+.task-pic > img {
+  width: 35px;
+  height: 35px;
+}
+
+.dailytasks-task-details-paper {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 0;
+  margin-left: 10px;
+}
+
+.dailytasks-task-details-paper > .task-title {
+  font-size: 0.9em;
+  color: #373755;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.dailytasks-task-details-paper > .task-notes {
+  font-size: 0.7em;
+  color: #a4adbf;
+}
+
+.dailytasks-task-action > img {
+  width: 25px;
+  height: 25px;
+}
+
+/*==========  For checked tasks  ==========*/
+
+ .dailytasks-task-checked .dailytasks-task-details-paper > .task-title,
+ .dailytasks-task-checked .dailytasks-task-details-paper > .task-notes{
+   color: #dedede;
+   text-decoration: line-through;
+ }
+
+/*https://stackoverflow.com/questions/7415872/change-color-of-png-image-via-css*/
+ .dailytasks-task-checked .dailytasks-task-details .task-pic > img,
+ .dailytasks-task-checked .dailytasks-task-action > img,
+  .dailytasks-task .dailytasks-task-action-unstarred > img {
+
+   -webkit-filter: grayscale(120%);
+   filter: grayscale(120%);
+
+ }
+
+ .dailytasks-task-checked .dailytasks-task-checkbox > input[type="checkbox"]{
+
+   display: hidden;
+   transform: scale(0);
+ }
