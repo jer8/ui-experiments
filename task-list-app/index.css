@@ -164,24 +164,23 @@ padding: 10px 5px;
 
 /*==========  For checked tasks  ==========*/
 
- .dailytasks-task-checked .dailytasks-task-details-paper > .task-title,
- .dailytasks-task-checked .dailytasks-task-details-paper > .task-notes{
-   color: #dedede;
-   text-decoration: line-through;
- }
+.dailytasks-task-checked .dailytasks-task-details-paper > .task-title,
+.dailytasks-task-checked .dailytasks-task-details-paper > .task-notes{
+ color: #dedede;
+ text-decoration: line-through;
+}
 
 /*https://stackoverflow.com/questions/7415872/change-color-of-png-image-via-css*/
- .dailytasks-task-checked .dailytasks-task-details .task-pic > img,
- .dailytasks-task-checked .dailytasks-task-action > img,
-  .dailytasks-task .dailytasks-task-action-unstarred > img {
+.dailytasks-task-checked .dailytasks-task-details .task-pic > img,
+.dailytasks-task .dailytasks-task-action-unstarred > img {
 
-   -webkit-filter: grayscale(120%);
-   filter: grayscale(120%);
+ -webkit-filter: grayscale(120%);
+ filter: grayscale(120%);
 
- }
+}
 
- .dailytasks-task-checked .dailytasks-task-checkbox > input[type="checkbox"]{
+.dailytasks-task-checked .dailytasks-task-checkbox > input[type="checkbox"]{
 
-   display: hidden;
-   transform: scale(0);
- }
+ display: hidden;
+ transform: scale(0);
+}
