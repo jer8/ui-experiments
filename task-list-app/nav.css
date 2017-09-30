@@ -1,19 +1,20 @@
-
 header {
   display: flex;
-  flex-flow: column;
-  height: 25%;
   max-width: 100%;
+  height: 25%;
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  color: #fff;
   background-image: url('images/navbackground.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: bottom;
-  color: #FFF;
-  padding: 15px 20px;
-  margin-bottom: 20px;
+  background-size: cover;
+  flex-flow: column;
 }
 
+
 /* Image overlay to make text more readable */
+
 header:before {
   position: absolute;
   z-index: 0;
@@ -22,11 +23,11 @@ header:before {
   width: 100%;
   height: 25%;
   content: ' ';
-  opacity: 0.8;
+  opacity: .8;
   background-image: linear-gradient(to right, #6d5a89, #2c2757);
 }
 
-header *{
+header * {
   z-index: 1;
 }
 
@@ -53,22 +54,95 @@ header *{
 }
 
 #list-detail {
-  margin-top: auto;
   font-size: 1.2em;
+  margin-top: auto;
 }
 
 .fab {
   position: absolute;
   top: 20.5%;
   right: 7%;
-  height: 60px;
   width: 60px;
+  height: 60px;
+  color: #fff;
+  border: none;
   border-radius: 50%;
-  border:none;
   background-color: #fd5c64;
-  color: #FFF;
 }
 
 .fab > span > i {
   -webkit-text-stroke: 3px #fd5c64;
+}
+
+
+/*==========  MEDIA QUERIES  ==========*/
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (min-width: 380px) {
+  #navigation > span > i {
+    font-size: 1.2em;
+  }
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: 480px) {
+  #navigation > span > i {
+    font-size: 1.5em;
+  }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {
+  #list-detail {
+    font-size: 1.5em;
+  }
+  .fab {
+    top: 20%;
+    width: 70px;
+    height: 70px;
+  }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {
+  #list-detail {
+    font-size: 1.8em;
+  }
+  .fab {
+    width: 75px;
+    height: 75px;
+  }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 920px) {
+  #list-detail {
+    font-size: 1.6em;
+  }
+  .fab {
+    top: 17%;
+    width: 65px;
+    height: 65px;
+  }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 920px) {
+  .fab {
+    top: 21%;
+    width: 80px;
+    height: 80px;
+  }
 }

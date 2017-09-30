@@ -5,32 +5,29 @@
 }
 
 body {
+  font-family: 'Raleway', sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
   letter-spacing: 1px;
 }
 
 .list-tasks {
-  padding:20px 15px;
+  padding: 20px 15px;
 }
 
 .dailytasks {
-
-display: flex;
-flex-direction: column;
-padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
 }
-
 
 .dailytasks-header {
+  font-size: .8em;
   margin-bottom: 10px;
   text-transform: uppercase;
-  font-size: 0.8em;
   color: #6b5684;
 }
-
 
 .dailytasks-task {
   display: flex;
@@ -39,21 +36,21 @@ padding: 10px 5px;
 }
 
 .dailytasks-task-checkbox, .dailytasks-task-action {
-  flex: 0 0 20px;
   display: flex;
+  flex: 0 0 20px;
   align-items: center;
 }
 
-.dailytasks-task-checkbox > input[type="checkbox"] {
+.dailytasks-task-checkbox > input[type='checkbox'] {
   transform: scale(1.8);
 }
 
 .dailytasks-task-details {
-  flex: 1 0 0;
+  display: flex;
   padding: 10px 0;
   padding-left: 20px;
+  flex: 1 0 0;
   align-items: center;
-  display: flex;
 }
 
 .task-pic > img {
@@ -64,19 +61,19 @@ padding: 10px 5px;
 .dailytasks-task-details-paper {
   display: flex;
   flex-direction: column;
-  flex: 1 0 0;
   margin-left: 10px;
+  flex: 1 0 0;
 }
 
 .dailytasks-task-details-paper > .task-title {
-  font-size: 0.8em;
-  color: #373755;
+  font-size: .8em;
   font-weight: bold;
   margin-bottom: 5px;
+  color: #373755;
 }
 
 .dailytasks-task-details-paper > .task-notes {
-  font-size: 0.6em;
+  font-size: .6em;
   color: #a4adbf;
 }
 
@@ -85,81 +82,192 @@ padding: 10px 5px;
   height: 25px;
 }
 
+
 /*==========  For checked tasks  ==========*/
 
-.dailytasks-task-checked .dailytasks-task-details-paper > .task-title,
-.dailytasks-task-checked .dailytasks-task-details-paper > .task-notes{
- color: #dedede;
- text-decoration: line-through;
+.dailytasks-task-checked .dailytasks-task-details-paper > .task-title, .dailytasks-task-checked .dailytasks-task-details-paper > .task-notes {
+  text-decoration: line-through;
+  color: #dedede;
 }
+
 
 /*https://stackoverflow.com/questions/7415872/change-color-of-png-image-via-css*/
-.dailytasks-task-checked .dailytasks-task-details .task-pic > img,
-.dailytasks-task .dailytasks-task-action-unstarred > img {
 
- -webkit-filter: grayscale(120%);
- filter: grayscale(120%);
-
+.dailytasks-task-checked .dailytasks-task-details .task-pic > img, .dailytasks-task .dailytasks-task-action-unstarred > img {
+  -webkit-filter: grayscale(120%);
+  filter: grayscale(120%);
 }
 
-.dailytasks-task-checked .dailytasks-task-checkbox > input[type="checkbox"],
-.dailytasks-task-checked .dailytasks-task-checkbox > input[type="checkbox"] + label {
-
- display: hidden;
- transform: scale(0);
+.dailytasks-task-checked .dailytasks-task-checkbox > input[type='checkbox'], .dailytasks-task-checked .dailytasks-task-checkbox > input[type='checkbox']+label {
+  display: hidden;
+  transform: scale(0);
 }
+
 
 /*==========  Checkbox styling  ==========*/
+
+
 /*https://codepen.io/Vestride/pen/dABHx*/
 
-.dailytasks-task-checkbox > input[type="checkbox"] {
+.dailytasks-task-checkbox > input[type='checkbox'] {
   position: absolute;
   opacity: 0;
 }
 
-.dailytasks-task-checkbox > input[type="checkbox"] + label {
+.dailytasks-task-checkbox > input[type='checkbox']+label {
   position: relative;
-  cursor: pointer;
-  padding: 0;
   width: 20px;
+  padding: 0;
+  cursor: pointer;
 }
-.dailytasks-task-checkbox > input[type="checkbox"] + label:before {
-  content: '';
-  margin-right: 10px;
+
+.dailytasks-task-checkbox > input[type='checkbox']+label:before {
   display: inline-block;
-  vertical-align: text-top;
   width: 20px;
   height: 20px;
-  background: #f9fafc;
+  margin-right: 10px;
+  content: '';
+  vertical-align: text-top;
   border: 1px solid #c0c6ce;
   border-radius: 10%;
+  background: #f9fafc;
 }
-.dailytasks-task-checkbox > input[type="checkbox"]:hover + label:before {
+
+.dailytasks-task-checkbox > input[type='checkbox']:hover+label:before {
   background: #4d3c65;
 }
-.dailytasks-task-checkbox > input[type="checkbox"]:focus + label:before {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+
+.dailytasks-task-checkbox > input[type='checkbox']:focus+label:before {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, .12);
 }
-.dailytasks-task-checkbox > input[type="checkbox"]:checked + label:before {
+
+.dailytasks-task-checkbox > input[type='checkbox']:checked+label:before {
   background: #4d3c65;
 }
-.dailytasks-task-checkbox > input[type="checkbox"]:disabled + label {
-  color: #cbcbcb;
+
+.dailytasks-task-checkbox > input[type='checkbox']:disabled+label {
   cursor: auto;
+  color: #cbcbcb;
 }
-.dailytasks-task-checkbox > input[type="checkbox"]:disabled + label:before {
-  box-shadow: none;
+
+.dailytasks-task-checkbox > input[type='checkbox']:disabled+label:before {
   background: #cbcbcb;
+  box-shadow: none;
 }
-.dailytasks-task-checkbox > input[type="checkbox"]:checked + label:after {
-  content: '';
+
+.dailytasks-task-checkbox > input[type='checkbox']:checked+label:after {
   position: absolute;
-  left: 5px;
   top: 9px;
-  background: white;
+  left: 5px;
   width: 2px;
   height: 2px;
-  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  content: '';
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
+  background: white;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+}
+
+
+/*==========  MEDIA QUERIES  ==========*/
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (min-width: 380px) {
+  .dailytasks-task {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+  .dailytasks-task-details {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: 460px) {
+  .dailytasks-task {
+    font-size: 1.2em;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .dailytasks-task-details {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .dailytasks-task-checkbox > input[type='checkbox'], .dailytasks-task-checkbox > input[type='checkbox']+label {
+    transform: scale(1.1);
+  }
+  .dailytasks-task-action > img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 520px) {
+  .dailytasks-task {
+    font-size: 1.5em;
+  }
+  .dailytasks-task-action > img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 560px) {
+  .dailytasks-list {
+    padding: 0 20px;
+    justify-content: center;
+  }
+}
+
+
+/* iPad */
+
+@media only screen and (min-width: 640px) {
+  main {
+    display: flex;
+    margin-left: auto;
+    justify-content: center;
+  }
+  .list-tasks {
+    width: 80%;
+    margin: 0;
+  }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 850px) {
+  .list-tasks {
+    width: 70%;
+  }
+}
+
+
+/* iPad */
+
+@media only screen and (min-width: 1024px) {
+  .list-tasks {
+    width: 60%;
+  }
+}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {
+  .list-tasks {
+    width: 45%;
+  }
 }
