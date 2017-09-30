@@ -6,4 +6,4 @@ Design idea from [Dribbble](https://dribbble.com/shots/2492038-Task-List-App/att
 
 ### Actual app screenshot: 
 
-![untitled](https://user-images.githubusercontent.com/17349825/31045500-5e984e80-a5f6-11e7-8918-dbf588735b7f.png)
+![tasklist](https://user-images.githubusercontent.com/17349825/31047045-7f3d4a46-a614-11e7-90e0-18ff0a722b95.png)
