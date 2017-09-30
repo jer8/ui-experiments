@@ -68,7 +68,20 @@ header * {
   border: none;
   border-radius: 50%;
   background-color: #fd5c64;
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
 }
+
+
+.fab:hover {
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.5);
+  background-color: #f55a61;
+  cursor: pointer;
+}
+
 
 .fab > span > i {
   -webkit-text-stroke: 3px #fd5c64;

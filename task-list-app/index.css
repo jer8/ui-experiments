@@ -82,6 +82,12 @@ body {
   height: 25px;
 }
 
+.dailytasks-task-action > img:hover {
+  -webkit-filter: grayscale(40%);
+  filter: grayscale(40%);
+  cursor: pointer;
+}
+
 
 /*==========  For checked tasks  ==========*/
 
@@ -253,7 +259,6 @@ body {
     width: 70%;
   }
 }
-
 
 /* iPad */
 
