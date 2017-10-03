@@ -1,5 +1,5 @@
 # ui-experiments
 
-Practice pages in front end development and design.
+My experiments in design and responsive frontend development.
 
-#### *Click each folder to see the designs, app screenshots and code!* 😉
+#### *Click on each folder to see the designs, app screenshots and code!* 😉
