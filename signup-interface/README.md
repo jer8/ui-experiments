@@ -2,10 +2,9 @@
 
 Design idea from [Dribble](https://dribbble.com/shots/2314157-Daily-UI-Day-1/attachments/439137).
 
-***Quick TODO: make site responsive***
-
 ### App screenshots
 
-![signup-interface-large](https://user-images.githubusercontent.com/17349825/31123004-3a083fb6-a84f-11e7-80e0-36c704592050.png)
+![signup-interface-large](https://user-images.githubusercontent.com/17349825/31126430-d528ac44-a85c-11e7-8128-abf05ac06c0e.png)
 
-![signup-iphoneipad](https://user-images.githubusercontent.com/17349825/31124625-4ddcdc34-a856-11e7-92c5-9cf70dcee13d.png)
+
+![signup-interface-ipadphone](https://user-images.githubusercontent.com/17349825/31126435-d918fa48-a85c-11e7-8dc9-b17db63f4b98.png)
