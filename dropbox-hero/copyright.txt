@@ -1,0 +1,3 @@
+All asset files & designs are properties of Dropbox business (dropbox.com/business)
+
+I recreated components of their website for practice.
