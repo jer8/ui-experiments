@@ -3,12 +3,14 @@ nav {
   display: flex;
   width: 100%;
   max-width: 100%;
-  height: 80px;
-  margin-right: auto;
-  margin-left: auto;
+  height: 11vh;
+  margin: 0 auto;
   padding: 0 15px;
   align-items: center;
   justify-content: flex-start;
+  background: transparent;
+  position: fixed;
+  top: 0;
 }
 
 nav > div.home-logo {
@@ -31,7 +33,7 @@ nav > div.home-logo > img.home-logo-text {
 }
 
 nav > div.home-nav {
-  font-family: 'AtlasGrotesk', 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 26px;
   display: flex;
