@@ -75,10 +75,7 @@ div.hero div.top-section div.hero-links div.hero-links-footer a {
   border-bottom: 1px solid #0071e0;
 }
 
-/*
-For testing nav change bg on scroll down
-
 main {
   height: 100vh;
   min-height: 100vh;
-}*/
+}
