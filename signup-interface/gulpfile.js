@@ -9,17 +9,8 @@ function handleError(error) {
   this.emit('end');
 }
 
-gulp.task('browserSync', function(){
-  //https://github.com/BrowserSync/browser-sync/issues/125
-  browserSync.init({
-    startPath:'./pages',
-    server: {
-      baseDir: 'application/dist',
-    },
-  });
-});
-
 gulp.task('css-build', function(){
+  console.log('PREPARING CSS FILES...');
   return gulp.src('application/scss/**/*.scss')
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
     .pipe(minifyCss())
@@ -32,6 +23,7 @@ gulp.task('css-build', function(){
 });
 
 gulp.task('html-build', function(){
+  console.log('PREPARING HTML FILES...');
   return gulp.src('application/pages/**/*.html')
     .pipe(minifyHtml())
     .on('error', handleError)
@@ -42,12 +34,23 @@ gulp.task('html-build', function(){
 });
 
 gulp.task('copy-assets', function(){
-  console.log('assetsss');
-  return gulp.src('application/images/*.*')
+  console.log('COPYING ASSETS...');
+  return gulp.src('application/images/**/*.*')
     .pipe(gulp.dest('application/dist/images'))
 });
 
-gulp.task('watch',['browserSync','css-build','html-build','copy-assets'], function(){
-  gulp.watch('application/scss/**/*.scss', ['css-build']);
-  gulp.watch('application/pages/*.html', ['html-build']);
+gulp.task('serve', ['copy-assets'], function(){
+  browserSync.init({
+    startPath:'./pages',
+    server: {
+      baseDir: 'application/dist',
+    },
+  });
+
+  gulp.watch('application/scss/**/*.scss', ['css-build', 'copy-assets']);
+  gulp.watch('application/**/*.html', ['html-build', 'copy-assets']);
+});
+
+gulp.task('deploy', ['css-build', 'html-build', 'copy-assets'], function() {
+  console.log('BUILD IS NOW READY INSIDE THE application/dist FOLDER!!!');
 });
