@@ -1,0 +1,18 @@
+{
+  "name": "signup-interface",
+  "version": "1.0.0",
+  "description": "Design idea from [Dribble](https://dribbble.com/shots/2314157-Daily-UI-Day-1/attachments/439137).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-sass": "^3.1.0"
+  }
+}
