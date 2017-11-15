@@ -4,8 +4,8 @@ Design idea from [Dribble](https://dribbble.com/shots/2314157-Daily-UI-Day-1/att
 
 ## To start the development
 
-1. ```gulp watch```
-2. All dist files will end up in ```application/dist```
+1. To view the page: ``gulp serve``
+2. To prepare final dist: ``gulp deploy``
 
 ### App screenshots
 
